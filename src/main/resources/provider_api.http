@@ -1,0 +1,38 @@
+###
+POST http://localhost:8080/api/v0_01/provider/add
+Content-Type: application/json
+
+{
+  "providerName": "Vanh Group",
+  "address": "Phuc Yen, Vinh Phuc",
+  "providerEmail": "vanhgroup@outlock.com",
+  "providerPhone": "0888999"
+}
+
+###
+GET http://localhost:8080/api/v0_01/provider/1
+
+### unfinished
+GET http://localhost:8080/api/v0_01/provider/full/1
+
+###
+GET http://localhost:8080/api/v0_01/provider
+
+### can only delete after all products associated with it is deleted
+DELETE http://localhost:8080/api/v0_01/provider/delete/5
+
+###
+PUT http://localhost:8080/api/v0_01/provider/update/4
+Content-Type: application/json
+
+{
+  "providerName": "KICM Group",
+  "address": "DaLatCity",
+  "providerEmail": "dalatgroup@outlock.com",
+  "providerPhone": "2222222"
+}
+
+###
+
+
+

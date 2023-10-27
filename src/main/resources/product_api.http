@@ -1,0 +1,72 @@
+###
+POST http://localhost:8080/api/v0_01/product/add
+Content-Type: application/json
+
+{
+  "productName": "Running boots",
+  "price": 12.99,
+  "description": "This is a nice running boots",
+  "importPrice": 2.99,
+  "itemInStock": 20,
+  "itemInShelf": 3,
+  "imagePath": "boots.com"
+}
+
+###,
+#  "categoryList": [
+#    {
+#      "categoryId": 8,
+#      "categoryName": "Foot Wear"
+#    },
+#    {
+#      "categoryId": 9,
+#      "categoryName": "Male"
+#    },
+#    {
+#      "categoryId": 10,
+#      "categoryName": "Female"
+#    }
+#  ]
+
+###
+GET http://localhost:8080/api/v0_01/product/1
+
+###
+GET http://localhost:8080/api/v0_01/product
+
+###
+DELETE http://localhost:8080/api/v0_01/product/delete/1
+
+###
+PUT http://localhost:8080/api/v0_01/product/update/2
+Content-Type: application/json
+
+{
+  "productName": "Magicccc shoes",
+  "price": 12.99,
+  "description": "This is a nice running staffs",
+  "importPrice": 2.99,
+  "itemInStock": 20,
+  "itemInShelf": 3,
+  "imagePath": "staffs.com"
+}
+
+###
+PUT http://localhost:8080/api/v0_01/product/put/category
+Content-Type: application/json
+
+{
+  "productId": 1,
+  "categoryId": 3
+}
+
+###
+PUT http://localhost:8080/api/v0_01/product/put/category/list
+Content-Type: application/json
+
+{
+  "productId": 1,
+  "categoryIdList": [5,6,7]
+}
+
+
