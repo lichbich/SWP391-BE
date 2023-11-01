@@ -1,0 +1,243 @@
+###
+POST http://localhost:8080/api/v0_01/product/add
+Content-Type: application/json
+
+{
+  "productName": "Running boots",
+  "price": 12.99,
+  "description": "This is a nice running boots",
+  "importPrice": 2.99,
+  "itemInStock": 20,
+  "itemInShelf": 3,
+  "imagePath": "boots.com"
+}
+
+###
+POST http://localhost:8080/api/v0_01/product/add
+Content-Type: application/json
+
+{
+  "productName": "Running boots",
+  "price": 12.99,
+  "description": "This is a nice running boots",
+  "importPrice": 2.99,
+  "itemInStock": 20,
+  "itemInShelf": 3,
+  "imagePath": "boots.com",
+  "category": {
+    "categoryId": 1
+  }
+}
+
+###
+POST http://localhost:8080/api/v0_01/product/add
+Content-Type: application/json
+
+{
+  "productName": "Running boots",
+  "price": 12.99,
+  "description": "This is a nice running boots",
+  "importPrice": 2.99,
+  "itemInStock": 20,
+  "itemInShelf": 3,
+  "imagePath": "boots.com",
+  "provider": {
+    "providerId": 3
+  }
+}
+
+###
+POST http://localhost:8080/api/v0_01/product/add
+Content-Type: application/json
+
+{
+  "productName": "Running boots",
+  "price": 12.99,
+  "description": "This is a nice running boots",
+  "importPrice": 2.99,
+  "itemInStock": 20,
+  "itemInShelf": 3,
+  "imagePath": "boots.com",
+  "category": {
+    "categoryId": 3
+  },
+  "provider": {
+    "providerId": 2
+  }
+}
+
+###
+POST http://localhost:8080/api/v0_01/product/dto/add
+Content-Type: application/json
+
+{
+  "productName": "Running bootssss",
+  "price": 12.99,
+  "description": "This is a nice running bootsssss",
+  "importPrice": 2.99,
+  "itemInStock": 20,
+  "itemInShelf": 3,
+  "imagePath": "boots.com",
+  "categoryId": 2,
+  "providerId": 2
+}
+
+###
+POST http://localhost:8080/api/v0_01/product/dto/list/add
+Content-Type: application/json
+
+[
+  {
+    "productName": "Running bootssss",
+    "price": 12.99,
+    "importPrice": 2.99,
+    "description": "This is a nice running bootsssss",
+    "itemInStock": 20,
+    "itemInShelf": 3,
+    "imagePath": "boots.com",
+    "categoryId": 1,
+    "providerId": 1
+  },
+  {
+    "productName": "Hatts bootssss",
+    "price": 100,
+    "importPrice": 20,
+    "description": "This is a nice hatsssss",
+    "itemInStock": 40,
+    "itemInShelf": 2,
+    "imagePath": "hats.com",
+    "categoryId": 2,
+    "providerId": 2
+  },
+  {
+    "productName": "Shirt",
+    "price": 99,
+    "importPrice": 39,
+    "description": "This is a nice shirttttt",
+    "itemInStock": 10,
+    "itemInShelf": 5,
+    "imagePath": "shirts.com",
+    "categoryId": 3,
+    "providerId": 3
+  }
+]
+
+###
+GET http://localhost:8080/api/v0_01/product/2
+
+###
+GET http://localhost:8080/api/v0_01/product/dto/1
+
+###
+GET http://localhost:8080/api/v0_01/product
+
+###
+GET http://localhost:8080/api/v0_01/product/dto
+
+###
+DELETE http://localhost:8080/api/v0_01/product/delete/1
+
+### category is too binded
+PUT http://localhost:8080/api/v0_01/product/update/9
+Content-Type: application/json
+
+{
+  "productName": "Magicccc shoes",
+  "price": 12.99,
+  "description": "This is a nice running staffs",
+  "importPrice": 2.99,
+  "itemInStock": 20,
+  "itemInShelf": 3,
+  "imagePath": "staffs.com",
+  "category": {
+    "categoryId": 4
+  },
+  "provider": {
+    "providerId": 4
+  }
+}
+
+### category is too binded
+PUT http://localhost:8080/api/v0_01/product/update/dto/9
+Content-Type: application/json
+
+{
+  "productName": "Magicccc boootssts",
+  "price": 12.99,
+  "importPrice": 2.99,
+  "description": "This is a nice running staffs",
+  "itemInStock": 20,
+  "itemInShelf": 3,
+  "imagePath": "staffs.com",
+  "category": {
+    "categoryId": 5
+  },
+  "provider": {
+    "providerId": 5
+  }
+}
+
+### failed
+PUT http://localhost:8080/api/v0_01/product/add/category
+Content-Type: application/json
+
+{
+  "productId": 5,
+  "categoryId": 8
+}
+
+### failed
+DELETE http://localhost:8080/api/v0_01/product/delete/category
+Content-Type: application/json
+
+{
+  "productId": 5,
+  "categoryId": 8
+}
+
+###
+POST http://localhost:8080/api/v0_01/product/search?keyword=o
+
+###
+POST http://localhost:8080/api/v0_01/product/search/category?name=ant
+
+###
+POST http://localhost:8080/api/v0_01/product/search/category/3
+
+###
+POST http://localhost:8080/api/v0_01/product/search/categories
+Content-Type: application/json
+
+{
+  "categoryIdList": [1, 2]
+}
+
+###
+PUT http://localhost:8080/api/v0_01/product/update/price
+Content-Type: application/json
+
+{
+  "productId": 3,
+  "price": 40
+}
+
+###
+PUT http://localhost:8080/api/v0_01/product/update/price/discount
+Content-Type: application/json
+
+{
+  "productId": 2,
+  "discount": 50
+}
+
+###
+PUT http://localhost:8080/api/v0_01/product/2/manager/stocktoshelf
+Content-Type: application/json
+
+3
+
+###
+PUT http://localhost:8080/api/v0_01/product/2/manager/shelftostock
+Content-Type: application/json
+
+3

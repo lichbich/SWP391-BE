@@ -1,0 +1,76 @@
+###
+POST http://localhost:8080/api/v0_01/category/add
+Content-Type: application/json
+
+{
+  "categoryName": "Bisexual",
+  "description": "For Bisexual"
+}
+
+###
+POST http://localhost:8080/api/v0_01/category/list/add
+Content-Type: application/json
+
+{
+  "categoryList": [
+    {
+      "categoryName": "Shoe",
+      "description": "Footwear for all occasions."
+    },
+    {
+      "categoryName": "Hat",
+      "description": "Various styles of headwear."
+    },
+    {
+      "categoryName": "Pants",
+      "description": "Different types of trousers and pants."
+    },
+    {
+      "categoryName": "Shirt",
+      "description": "A variety of shirts and tops."
+    },
+    {
+      "categoryName": "Sweater",
+      "description": "Warm and comfortable sweaters."
+    },
+    {
+      "categoryName": "Boots",
+      "description": "Stylish and practical boots."
+    },
+    {
+      "categoryName": "Slippers",
+      "description": "Comfortable indoor footwear."
+    },
+    {
+      "categoryName": "Helmet",
+      "description": "Protective headgear for various activities."
+    }
+  ]
+}
+
+
+### will not list product list
+GET http://localhost:8080/api/v0_01/category/3
+
+### not list product list
+GET http://localhost:8080/api/v0_01/category/full/3
+
+###
+GET http://localhost:8080/api/v0_01/category
+
+###
+DELETE http://localhost:8080/api/v0_01/category/delete/9
+
+### Update category or add a new category
+PUT http://localhost:8080/api/v0_01/category/update/9
+Content-Type: application/json
+
+{
+  "categoryName" : "PanzerSexual",
+  "description": "Panzersexuality"
+}
+
+###
+
+
+

@@ -1,0 +1,95 @@
+###
+POST http://localhost:8080/api/v0_01/provider/add
+Content-Type: application/json
+
+{
+  "providerName": "Vanh Group",
+  "providerAddress": "Phuc Yen, Vinh Phuc",
+  "providerEmail": "vanhgroup@outlock.com",
+  "providerPhone": "0888999"
+}
+
+###
+POST http://localhost:8080/api/v0_01/provider/dto/add
+Content-Type: application/json
+
+{
+  "providerName": "VIN Group",
+  "providerAddress": "Vinh Phuc",
+  "providerEmail": "vingroup@outlock.com",
+  "providerPhone": "999999"
+}
+
+###
+POST http://localhost:8080/api/v0_01/provider/dto/list/add
+Content-Type: application/json
+
+[
+  {
+    "providerName": "ABC Group",
+    "providerAddress": "Vinh Long",
+    "providerEmail": "abcgroup@outlock.com",
+    "providerPhone": "111111"
+  },
+  {
+    "providerName": "Viettel",
+    "providerAddress": "HANOI",
+    "providerEmail": "viettel@outlock.com",
+    "providerPhone": "9992222"
+  },
+  {
+    "providerName": "Masan Group",
+    "providerAddress": "HCM",
+    "providerEmail": "masangroup@outlock.com",
+    "providerPhone": "333333"
+  },
+  {
+    "providerName": "FPT Group",
+    "providerAddress": "Hola",
+    "providerEmail": "fptgroup@outlock.com",
+    "providerPhone": "8888888"
+  },
+  {
+    "providerName": "MB Bank",
+    "providerAddress": "HN",
+    "providerEmail": "mbbank@outlock.com",
+    "providerPhone": "6666666"
+  }
+]
+
+###
+GET http://localhost:8080/api/v0_01/provider/1
+
+### unfinished list with products list
+GET http://localhost:8080/api/v0_01/provider/full/1
+
+###
+GET http://localhost:8080/api/v0_01/provider
+
+### can only delete after all products associated with it is deleted
+DELETE http://localhost:8080/api/v0_01/provider/delete/2
+
+###
+PUT http://localhost:8080/api/v0_01/provider/update/7
+Content-Type: application/json
+
+{
+  "providerName": "KICM Group",
+  "providerAddress": "DaLatCity",
+  "providerEmail": "dalatgroup@outlock.com",
+  "providerPhone": "2222222"
+}
+
+###
+PUT http://localhost:8080/api/v0_01/provider/update/dto/7
+Content-Type: application/json
+
+{
+  "providerName": "RICHCHOI Group",
+  "providerAddress": "DaLatCity",
+  "providerEmail": "dalatgroup@outlock.com",
+  "providerPhone": "2222222"
+}
+
+
+

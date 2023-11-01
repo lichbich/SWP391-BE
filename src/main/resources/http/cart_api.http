@@ -1,0 +1,90 @@
+###
+POST http://localhost:8080/api/v0_01/cart/create
+
+### unfinish
+POST http://localhost:8080/api/v0_01/cart/add
+Content-Type: application/json
+
+{
+  "items": [
+    {
+      "product": {
+        "productId": 1
+      },
+      "quantity": 20
+    },
+    {
+      "product": {
+      "productId": 3
+      },
+      "quantity": 3
+    }
+  ]
+}
+
+###
+GET http://localhost:8080/api/v0_01/cart/1
+
+###
+GET http://localhost:8080/api/v0_01/cart
+
+###
+DELETE http://localhost:8080/api/v0_01/cart/delete/2
+
+### unfinish
+PUT http://localhost:8080/api/v0_01/cart/update/5
+Content-Type: application/json
+
+{
+  "items": [
+    {
+      "product": {
+        "productId": 2
+      },
+      "quantity": 300
+    },
+    {
+      "product": {
+        "productId": 3
+      },
+      "quantity": 111
+    }
+  ]
+}
+
+###
+PUT http://localhost:8080/api/v0_01/cart/item/add
+Content-Type: application/json
+
+{
+  "cartId": 1,
+  "productId": 1,
+  "quantity": 5
+}
+
+###
+DELETE http://localhost:8080/api/v0_01/cart/item/delete
+Content-Type: application/json
+
+{
+  "cartId": 1,
+  "cartItemId": 1
+}
+
+###
+GET http://localhost:8080/api/v0_01/cart/item
+Content-Type: application/json
+
+{
+  "cartId": 4,
+  "cartItemId": 10
+}
+
+###
+POST http://localhost:8080/api/v0_01/cart/total
+Content-Type: application/json
+
+{
+  "cartId": 1,
+  "cartItemIdList": [2, 3]
+}
